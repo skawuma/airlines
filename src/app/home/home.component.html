@@ -1,0 +1,72 @@
+<html>
+
+
+<Body>
+
+    <div style="text-align: center;">
+        <h1>Flying private made simple
+
+        </h1>
+    </div>
+
+    <div style="text-align: center;">
+        <h3>THE FIRST AND ONLY GLOBAL PRIVATE AVIATION COMPANY </h3>
+    </div>
+
+    <div style="text-align: center;">
+        <img class="homeimg" src="/assets/private.jpeg" alt="Wokers Images" style="width:25%;" />
+    </div>
+
+
+
+
+
+   
+<footer class="footer">
+    <p>Author: Samuel Kawuma<br>
+        <a href="christokawuma69@gmail.com">christokawuma69@gmail.com</a>
+    </p>
+</footer>
+    
+    
+
+    <td> <button class="btn btn-danger btn-rounded" (click)="readUser()"> DisplayEmployee</button></td>
+    <h1>List of All the data is here</h1>
+
+
+    <table class="table ">
+
+        
+        <tr>
+            <p></p>
+            <th scope="col">#</th>
+            <th>id</th>
+            <th>Name</th>
+            <th>dept</th>
+            <th>salary</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let user of users">
+
+            <th scope="row">#</th>
+            <td>{{ user.id }}</td>
+            <td>{{user.name }}</td>
+            <td>{{ user.dept}}</td>
+            <td>{{ user.salary }}</td>
+            <td> <button class="btn btn-danger btn-rounded" (click)="deleteUser(user.id)"> Delete User</button></td>
+
+            <p></p>
+        </tr>
+
+    </table>
+<br>
+<br>
+<p></p>
+<br>
+<br>
+</Body>
+<br>
+<br>
+
+
+</html>

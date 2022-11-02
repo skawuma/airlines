@@ -1,0 +1,31 @@
+<p>registration works!</p>
+<!-- we need to create a form  to post the data-->
+<form [formGroup]="profileForm" (ngSubmit)="submit()">
+    <!-- <form action="action_page.php" method="post"> -->
+    <div class="imgcontainer">
+ 
+    </div>
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h4>
+                <input type="text" placeholder="Enter id" name="id" required formControlName="id">
+            
+                <br>
+                <input type="text" placeholder="Enter name" name="name" formControlName="name">
+                <br>
+                <input type="text" placeholder="Enter dept" name="dept" required formControlName="dept">
+                <br>
+                <input type="text" placeholder="salary" name="salary" required formControlName="salary">
+                <br>
+            
+ 
+                <button type="submit">Register</button><br>
+            </h4>
+        </div>
+
+        
+        <div>
+
+            <div class="jumbotron text-center">
+                <h1>{{ack| uppercase}}</h1>
+        </div>
