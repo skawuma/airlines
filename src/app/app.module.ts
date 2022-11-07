@@ -13,6 +13,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { Component1Component } from './component1/component1.component';
+import { Component2Component } from './component2/component2.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     FooterComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    Component1Component,
+    Component2Component,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,

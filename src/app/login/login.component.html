@@ -1,1 +1,63 @@
-<p>login works!</p>
+
+<!-- we need to create a form  to post the data-->
+<form [formGroup]="profileForm" (ngSubmit)="login()">
+    <!-- <form action="action_page.php" method="post"> -->
+
+        <div>
+
+            <div class="jumbotron text-center">
+                <h3>{{ack| uppercase}}</h3>
+        </div>
+    <div class="imgcontainer">
+        <img  class="one" src="/assets/pass.jpeg" alt="Avatar" class="avatar"  style="object-fit:scale-down;
+        width:100px;
+        height:100px;
+        border: solid 1px #CCC"/>
+    </div>
+
+
+    
+    
+
+
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h4>
+                <input type="text" placeholder="Enter id" name="id" required formControlName="id">
+            
+                <br>
+                <input type="text" placeholder="Enter name" name="name" formControlName="name">
+                <br>
+               
+            
+ 
+                <button type="submit" click = "login()">Login</button><br>
+            </h4>
+        </div>
+
+        
+        
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+          </div><br><br>
+
+          
+
+
+
+
+          
+
+
+          <footer class="footer">
+            <p>Author: Samuel Kawuma<br>
+            <a href="christokawuma69@gmail.com">christokawuma69@gmail.com</a></p>
+          </footer>
+
+
+          
+          

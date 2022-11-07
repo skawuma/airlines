@@ -1,31 +1,47 @@
-<p>registration works!</p>
 <!-- we need to create a form  to post the data-->
 <form [formGroup]="profileForm" (ngSubmit)="submit()">
     <!-- <form action="action_page.php" method="post"> -->
-    <div class="imgcontainer">
- 
-    </div>
-    <div class="jumbotron text-center">
-        <div class="container">
-            <h4>
-                <input type="text" placeholder="Enter id" name="id" required formControlName="id">
-            
-                <br>
-                <input type="text" placeholder="Enter name" name="name" formControlName="name">
-                <br>
-                <input type="text" placeholder="Enter dept" name="dept" required formControlName="dept">
-                <br>
-                <input type="text" placeholder="salary" name="salary" required formControlName="salary">
-                <br>
-            
- 
-                <button type="submit">Register</button><br>
-            </h4>
+    <div class="imgcontainer"></div>
+
+    <div>
+        <div class="jumbotron text-center">
+            <h3>{{ack| uppercase}}</h3>
         </div>
 
-        
-        <div>
+        <div class="jumbotron text-center">
+            <div class="container">
+                <h4>
+                    <input type="text" placeholder="Enter id" name="id" required formControlName="id">
+                    <!--        here we  will add some logic  -->
+                    
+                    <div class="alert-danger"  *ngIf="f['name'].touched">
+                        <div *ngIf="f['name'].errors?.['required']" > Name is required </div>
+                        <div *ngIf="f['name'].errors?.['minlength']" >Length must be 4</div>
+                    </div>
+                    
+                    
+                    <!-- 
+                    <div class="alert-danger" *ngIf="f['name'].touched">
+                        <div *ngIf="f['name'].invalid" [ngClass]="'error'"> Name is required </div>
+                        <div *ngIf="f['name'].errors?.['minlength']" [ngClass]="'error'">Length must be 4</div>
+                    </div>
+                    -->  
+                    
+                    <input type="text" placeholder="Enter name" name="name" formControlName="name">
+                    
 
-            <div class="jumbotron text-center">
-                <h1>{{ack| uppercase}}</h1>
-        </div>
+                    <input type="text" placeholder="Enter dept" name="dept" required formControlName="dept">
+                    
+                    <input type="text" placeholder="salary" name="salary" required formControlName="salary">
+                    
+
+                    <button type="submit">Register</button><br>
+                </h4>
+            </div>
+
+
+            <footer class="footer">
+                <p>Author: Samuel Kawuma<br>
+                    <a href="christokawuma69@gmail.com">christokawuma69@gmail.com</a>
+                </p>
+            </footer>

@@ -1,0 +1,13 @@
+<p> component 1 works!</p>
+<h1>We are trying to understand how data is given to one component to another</h1>
+
+<!-- <app-component2></app-component2> -->
+<!-- <app-component2 name="Norberto"></app-component2>
+<app-component2 name="Albert"></app-component2> -->
+<!-- <h1> {{dept}}</h1> -->
+
+<app-component2 (newItemEvent)="addItem($event)"></app-component2>
+
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>

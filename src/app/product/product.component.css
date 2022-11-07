@@ -18,7 +18,7 @@
   }
   
   .header {
-    background-color: #9933cc;
+    background-color: rgb(127, 69, 15);
     color: #ffffff;
     padding: 15px;
   }
@@ -93,3 +93,13 @@
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
   }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(232, 117, 10);
+    color: white;
+    text-align: center;
+ }

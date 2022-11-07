@@ -64,9 +64,54 @@
 <p></p>
 <br>
 <br>
+
+
 </Body>
 <br>
 <br>
 
 
 </html>
+<li *ngFor="let i of info">
+    <h3>info = {{i}} </h3>
+    
+    </li>
+    <br>
+    <br>
+    <br>
+<br>
+    <li *ngFor="let i of info4">
+        <h3>info = {{i.item}} </h3>
+        <h3>info = {{i.rec}} </h3>
+
+    </li>
+    <br>
+    <br>
+   
+    <li *ngIf="true">
+        <h3>Hello world</h3>
+        </li>
+
+        <br><br><br><br>
+        <li *ngIf="num % 2 != 0">
+            <h1>Its odd!</h1>
+            </li>
+            <li *ngIf="num % 2 == 0">
+                <h1>Its even!</h1>
+                </li>
+
+                <br><br>
+                <hr>
+                
+          <div *ngIf="isLoggedIn; else loggedOut">
+            <h2 [ngStyle]="{'background-color':'green', 'color':'white'}">Welcome back, friend.</h2>
+            <h3 [ngStyle]="{'background-color':'green', 'color':'white'}">Welcome back, friend.</h3>
+            </div>
+  
+            <ng-template #loggedOut>
+              Please friend, login.
+              Data Entered Is Wrong
+            </ng-template>
+                
+                
+                <hr>

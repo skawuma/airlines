@@ -26,7 +26,7 @@ export class RegistrationComponent implements OnInit {
  // also we need to write the logic to connect with registration service once data is ready.
  
  profileForm = new FormGroup({
- 
+ // html  file will respond  to the validations.
   id: new FormControl('', [Validators.required, Validators.minLength(4)]),
   name: new FormControl('', [Validators.required,Validators.minLength(4)]),
   dept: new FormControl('', [Validators.required]),

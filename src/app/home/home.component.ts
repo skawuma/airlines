@@ -7,7 +7,7 @@ import { EmployeeService } from '../employee.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
  
   //Service must be triggered by Component (Home or About.
@@ -47,7 +47,24 @@ deleteUser(id: number) {
       // and  match with your credentials
  }
  
+ //trying to explore the dir
+ info = [1,2,3,4,5];
 
- 
-
+ info4= [
+  {
+    item: "banana",
+    rec:"600",
+  },
+  {
+    item: "apple",
+    rec:"1000",
+  },
+  {
+    item: "lemon",
+    rec:"2000",
+  }
+] ;
+num = 10;
+isLoggedIn =true;
+  
 }

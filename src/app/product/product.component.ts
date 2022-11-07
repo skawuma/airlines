@@ -8,20 +8,23 @@ import { PayrollService } from '../payroll.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  
 
   
   //Service must be triggered by Component (Home or About.
 //Trigger will happen from here
-
+ngOnInit(): void {
+  this.isLoggedIn =true;
+}
 user : Payroll= new Payroll();
 users: any;
   deleteMessge: any;
 
 constructor(private signupService:PayrollService) { }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
+  
+// ngOnInit(): void {
+//   throw new Error('Method not implemented.');
+// }
 
 
 readUser() {  
@@ -43,6 +46,7 @@ deleteUser(payId: number) {
       },
       (      error: any) => console.log(error));
  }
+ isLoggedIn =true;
 }
 
 
